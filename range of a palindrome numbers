@@ -1,0 +1,28 @@
+import java.util.*;
+class Palindrome1
+{
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+	System.out.print("Enter Starting number:");
+        int start=sc.nextInt();
+	System.out.print("Enter ending number:");
+        int end=sc.nextInt();
+	System.out.print("the palindrome numbers are:");
+        for(int i=start;i<=end;i++)
+        {
+            int temp=i;
+            int rev=0;
+            while(temp>0)
+            {
+                int rem=temp%10;
+                rev=rev*10+rem;
+                temp=temp/10;
+            }
+	    	if(i==rev)
+        	{
+             		System.out.println(i+" ");
+        	}
+        }
+    }
+}
